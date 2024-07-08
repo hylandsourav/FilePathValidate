@@ -163,10 +163,11 @@ public class Program
     public static void Main()
     {
         // Test cases
-        string filePath = @"C:\Users\somaji\Desktop\..\web.config";
+        string filePath = @"C:\Users\somaji\Desktop\web.config";
 
         try
-        {           
+        {
+            Console.WriteLine("given file path:" + filePath);
             string safeFileName = FileAndPathNameIllegalCharUtility.CreateSafeFileName(filePath, out string sanitizedFileName, IllegalCharacterScrubOptions.All);
             Console.WriteLine($"Safe File Name: {safeFileName}");
 
