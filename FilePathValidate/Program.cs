@@ -167,10 +167,8 @@ public class Program
 
         try
         {
-            Console.WriteLine("given file path:" + filePath);
             string safeFileName = FileAndPathNameIllegalCharUtility.CreateSafeFileName(filePath, out string sanitizedFileName, IllegalCharacterScrubOptions.All);
-            Console.WriteLine($"Safe File Name: {safeFileName}");
-
+            
             // Create a safe file path
             string safeFilePath = FileAndPathNameIllegalCharUtility.CreateSafeFilePath(filePath);
             Console.WriteLine($"Safe File Path: {safeFilePath}");
